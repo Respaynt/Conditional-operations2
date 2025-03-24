@@ -4,17 +4,17 @@ public class Main {
         int clientDeviceYear = 2015;
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        }else if (clientOS == 1){
+        } else if (clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-        if(clientOS == 0 && clientDeviceYear < 2015){
+        if (clientOS == 0 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }else if(clientOS == 0 && clientDeviceYear >= 2015) {
+        } else if (clientOS == 0 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
-        if(clientOS == 1 && clientDeviceYear < 2015){
+        if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        }else if(clientOS == 1 && clientDeviceYear >= 2015) {
+        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
 
@@ -30,29 +30,29 @@ public class Main {
 
 
         int deliveryDistance = 95;
-        if (deliveryDistance < 20){
-                System.out.println("Потребуется 1 день на доставку");
-        }else if (deliveryDistance >=20 && deliveryDistance < 60){
+        if (deliveryDistance < 20) {
+            System.out.println("Потребуется 1 день на доставку");
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
             System.out.println("Потребуется 2 дня на доставку");
-        }else if(deliveryDistance >= 60 && deliveryDistance < 100){
+        } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             System.out.println("Потребуется 3 дня на доставку");
-        }else {
+        } else {
             System.out.println("Доставки нет");
         }
 
 
         int monthNumber = 13;
-        switch (monthNumber){
-            case 1,2,12:
+        switch (monthNumber) {
+            case 1, 2, 12:
                 System.out.println("Сейчас зима");
                 break;
-            case 3,4,5:
+            case 3, 4, 5:
                 System.out.println("Сейчас весна");
                 break;
-            case 6,7,8:
+            case 6, 7, 8:
                 System.out.println("Сейчас лето");
                 break;
-            case 9,10,11:
+            case 9, 10, 11:
                 System.out.println("Сейчас осень");
                 break;
             default:
