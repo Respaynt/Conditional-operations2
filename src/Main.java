@@ -2,13 +2,10 @@ public class Main {
     public static void main(String[] args) {
         int clientOS = 0;
         int clientDeviceYear = 2015;
-        switch (clientOS) {
-            case 0:
-                System.out.println("Установите версию приложения для iOS по ссылке");
-                break;
-            case 1:
-                System.out.println("Установите версию приложения для Android по ссылке");
-                break;
+        if (clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        }else if (clientOS == 1){
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
         if(clientOS == 0 && clientDeviceYear < 2015){
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
@@ -23,12 +20,13 @@ public class Main {
 
 
         int year = 2021;
-        if((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)|| (year < 1584)){
-            System.out.println(year + " год является високосным");
-        }else{
-            System.out.println(year + " год не является високосным");
+        if (year >= 1584) {
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+                System.out.println(year + " год является високосным");
+            } else {
+                System.out.println(year + " год не является високосным");
+            }
         }
-
 
 
         int deliveryDistance = 95;
@@ -38,14 +36,14 @@ public class Main {
             System.out.println("Потребуется 2 дня на доставку");
         }else if(deliveryDistance >= 60 && deliveryDistance < 100){
             System.out.println("Потребуется 3 дня на доставку");
-        }else if (deliveryDistance >= 100){
+        }else {
             System.out.println("Доставки нет");
         }
 
 
-        int monthNumber = 12;
+        int monthNumber = 13;
         switch (monthNumber){
-            case 12,1,2:
+            case 1,2,12:
                 System.out.println("Сейчас зима");
                 break;
             case 3,4,5:
@@ -57,6 +55,8 @@ public class Main {
             case 9,10,11:
                 System.out.println("Сейчас осень");
                 break;
+            default:
+                System.out.println("Такого месяца не существует");
         }
 
     }
